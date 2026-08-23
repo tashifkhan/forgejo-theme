@@ -1,0 +1,49 @@
+{
+  "name": "forgejo-theme",
+  "displayName": "Forgejo Theme",
+  "description": "Official Forgejo dark & light themes (forgejo-dark / forgejo-light), ported from Forgejo's CSS design tokens",
+  "version": "0.1.0",
+  "publisher": "taf",
+  "license": "MIT",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#10161d",
+    "theme": "dark"
+  },
+  "keywords": [
+    "forgejo",
+    "gitea",
+    "git",
+    "orange",
+    "steel",
+    "dark",
+    "light"
+  ],
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Forgejo Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/forgejo-dark-color-theme.json"
+      },
+      {
+        "label": "Forgejo Light",
+        "uiTheme": "vs",
+        "path": "./themes/forgejo-light-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.taf.sh/taf/forgejo-theme"
+  },
+  "bugs": {
+    "url": "https://git.taf.sh/taf/forgejo-theme/issues"
+  }
+}
