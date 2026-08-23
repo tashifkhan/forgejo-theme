@@ -140,7 +140,7 @@
         "success": "#16a34aff",
         "success.background": "#1d462cff",
         "success.border": "#1f6e3cff",
-        "unreachable": "#8c9caff",
+        "unreachable": "#8c9cafff",
         "unreachable.background": "#37435133",
         "unreachable.border": "#374351ff",
         "warning": "#eaaf03ff",
@@ -245,7 +245,7 @@
             "font_weight": null
           },
           "hint": {
-            "color": "#8c9caff",
+            "color": "#8c9cafff",
             "font_style": null,
             "font_weight": null
           },
