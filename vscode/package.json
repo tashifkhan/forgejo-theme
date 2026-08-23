@@ -2,7 +2,7 @@
   "name": "forgejo-theme",
   "displayName": "Forgejo Theme",
   "description": "Forgejo dark and light themes ported from Forgejo's CSS design tokens",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "taf",
   "license": "MIT",
   "icon": "icon.png",

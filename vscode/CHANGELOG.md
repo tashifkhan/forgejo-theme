@@ -1,3 +1,9 @@
+# 0.1.1 - 2026-08-24
+
+- Match Forgejo's dark UI hierarchy more closely. The navbar stays near-black,
+  the main window uses steel-800, raised areas use steel-750, and selected rows
+  use steel-600.
+
 # 0.1.0 - 2026-08-23
 
 - Initial release.

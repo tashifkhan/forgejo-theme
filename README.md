@@ -36,7 +36,7 @@ from Zed's command palette and select the `zed` directory.
 ```bash
 cd vscode
 npx --yes @vscode/vsce@latest package
-code --install-extension forgejo-theme-0.1.0.vsix --force
+code --install-extension forgejo-theme-0.1.1.vsix --force
 ```
 
 Then run `Preferences: Color Theme` and choose Forgejo Dark or Forgejo Light.
