@@ -1,6 +1,6 @@
 id = "forgejo"
 name = "Forgejo"
-version = "0.1.1"
+version = "0.1.2"
 schema_version = 1
 authors = ["taf"]
 description = "Dark and light themes based on Forgejo's forgejo-dark and forgejo-light CSS tokens"
