@@ -1,9 +1,10 @@
-# 0.1.0
+# 0.1.0 - 2026-08-23
 
-- Initial release
+- Initial release.
 - Forgejo Dark: ported from Forgejo's official `theme-forgejo-dark.css`
-  (steel surface scale, `#fb923c` primary, Chroma `dark.css` syntax palette)
-- Forgejo Light: ported from `theme-forgejo-light.css` (zinc surfaces,
-  `#c2410c` primary, Chroma `light.css` syntax palette)
-- Both variants keep Forgejo's dark Actions console (`#1f212b` + its
-  `--color-ansi-*` palette) for the integrated terminal
+  with its steel surface scale, `#fb923c` primary, and Chroma dark syntax
+  palette.
+- Forgejo Light: ported from `theme-forgejo-light.css` with zinc surfaces,
+  the `#c2410c` primary, and Chroma light syntax palette.
+- Both variants use Forgejo's Actions console colors for the integrated
+  terminal.

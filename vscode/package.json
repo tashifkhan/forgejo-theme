@@ -1,7 +1,7 @@
 {
   "name": "forgejo-theme",
   "displayName": "Forgejo Theme",
-  "description": "Official Forgejo dark & light themes (forgejo-dark / forgejo-light), ported from Forgejo's CSS design tokens",
+  "description": "Forgejo dark and light themes ported from Forgejo's CSS design tokens",
   "version": "0.1.0",
   "publisher": "taf",
   "license": "MIT",
@@ -41,9 +41,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.taf.sh/taf/forgejo-theme"
+    "url": "https://github.com/tashifkhan/forgejo-theme.git"
   },
+  "homepage": "https://github.com/tashifkhan/forgejo-theme#readme",
   "bugs": {
-    "url": "https://git.taf.sh/taf/forgejo-theme/issues"
+    "url": "https://github.com/tashifkhan/forgejo-theme/issues"
   }
 }

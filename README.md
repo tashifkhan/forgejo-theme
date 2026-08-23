@@ -1,27 +1,19 @@
 # Forgejo Theme
 
-Color themes for Zed and VS Code ported from Forgejo's official
-`forgejo-dark` / `forgejo-light` web themes, i.e. the same design tokens
-that power [git.taf.sh](https://git.taf.sh).
+Forgejo Dark and Forgejo Light for Zed and VS Code. Both ports use the CSS
+tokens and Chroma syntax colors from Forgejo, including the steel surfaces,
+orange controls, diff colors, and Actions console palette.
 
-Two variants in one family:
-
-| Theme          | Appearance | Source                                            |
-| -------------- | ---------- | ------------------------------------------------- |
-| **Forgejo Dark**  | dark       | `web_src/css/themes/theme-forgejo-dark.css` + `chroma/dark.css` |
-| **Forgejo Light** | light      | `web_src/css/themes/theme-forgejo-light.css` + `chroma/light.css` |
-
-Surfaces use Forgejo's steel scale (`#10161d` navbar → `#171e26` body →
-`#1d262f` code), the primary is Forgejo orange (`#fb923c` dark / `#c2410c`
-light), and syntax colors come 1:1 from the Chroma highlighting palette your
-instance renders code blocks with. The integrated terminal keeps Forgejo's
-Actions-console look (`#1f212b` + its `--color-ansi-*` palette).
+| Theme | Appearance | Forgejo source |
+| --- | --- | --- |
+| Forgejo Dark | dark | [`theme-forgejo-dark.css`](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/web_src/css/themes/theme-forgejo-dark.css) and [`chroma/dark.css`](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/web_src/css/chroma/dark.css) |
+| Forgejo Light | light | [`theme-forgejo-light.css`](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/web_src/css/themes/theme-forgejo-light.css) and [`chroma/light.css`](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/web_src/css/chroma/light.css) |
 
 ## Layout
 
 ```
-zed/       Zed extension (extension.toml + themes/forgejo.json)
-vscode/    VS Code extension (package.json + themes/*.json + icon)
+zed/       Zed extension and theme
+vscode/    VS Code extension and themes
 ```
 
 ## Install locally
@@ -33,28 +25,32 @@ mkdir -p ~/.config/zed/themes
 cp zed/themes/forgejo.json ~/.config/zed/themes/
 ```
 
-Restart Zed, then `theme selector: toggle` (cmd-k cmd-t) → **Forgejo Dark**
-or **Forgejo Light**.
+Restart Zed, then run `theme selector: toggle` with `cmd-k cmd-t` and choose
+Forgejo Dark or Forgejo Light.
+
+To load the extension during development, run `zed: install dev extension`
+from Zed's command palette and select the `zed` directory.
 
 ### VS Code
 
 ```bash
 cd vscode
-npx @vscode/vsce package
-code --install-extension forgejo-theme-0.1.0.vsix
+npx --yes @vscode/vsce@latest package
+code --install-extension forgejo-theme-0.1.0.vsix --force
 ```
 
-Then `Preferences: Color Theme` → **Forgejo Dark** / **Forgejo Light**.
+Then run `Preferences: Color Theme` and choose Forgejo Dark or Forgejo Light.
 
-## Publishing
+## Validation
 
-- Zed: fork `zed-industries/extensions`, add the extension as a git submodule
-  + an entry in `extensions.toml`, open a PR.
-- VS Code: create a publisher on the Marketplace, `vsce publish` with an
-  Azure DevOps PAT; mirror to Open VSX with `ovsx publish`.
+The Zed theme targets the official v0.2 theme schema. The VS Code package can
+be checked and built with `@vscode/vsce`:
 
-Full write-up: <https://dump.taf.sh>
+```bash
+jq empty zed/themes/forgejo.json vscode/themes/*.json
+cd vscode && npx --yes @vscode/vsce@latest package
+```
 
 ## License
 
-MIT. Forgejo's color values come from the Forgejo project (MIT).
+MIT. Forgejo's source files are also MIT licensed.

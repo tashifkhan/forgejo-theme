@@ -3,5 +3,5 @@ name = "Forgejo"
 version = "0.1.0"
 schema_version = 1
 authors = ["taf"]
-description = "Forgejo's official dark and light themes, ported from forgejo-dark / forgejo-light"
-repository = "https://git.taf.sh/taf/forgejo-theme"
+description = "Dark and light themes based on Forgejo's forgejo-dark and forgejo-light CSS tokens"
+repository = "https://github.com/tashifkhan/forgejo-theme"
